@@ -13,8 +13,10 @@ CREATE TABLE Cliente(
 );
 
 -----TABELA CATEGORIA
-    id_categoria INT AUTO_INCREMENT PRIMARY KEY,
-    nome VARCHAR(100) NOT NULL
+
+CREATE TABLE Categoria(
+    id_categoria INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL
 );
 
 -----TABELA PRODUTO
@@ -62,3 +64,4 @@ CREATE TABLE Avaliacao(
     FOREIGN KEY(id_cliente) REFERENCES Cliente(id_cliente),
     FOREIGN KEY(id_produto) REFERENCES Produto(id_produto)
 );
+
